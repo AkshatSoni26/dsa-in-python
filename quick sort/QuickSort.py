@@ -13,9 +13,11 @@ def partiona(arr, s, e):
             j -= 1
         
         if ( i < j ):
+            print('element is posioned',arr)
             arr[i], arr[j] = arr[j], arr[i]
 
     arr[s], arr[j] = arr[j], arr[s]
+    print(f'element is poistioned ar is correct position at index {j} from {s}',arr)
 
     return j
             
@@ -30,14 +32,16 @@ def QuickSort(arr, s, e):
 
         #quick sort in the left part
         QuickSort(arr, s, pi-1)
+        print("============left portion============")
 
         #quick sort in the right part
         QuickSort(arr, pi+1, e) 
+        print("============right portion============")
+
 
         return arr
     
-    else:
-        return arr
+    return arr
 
 
 arr = [4,6,2,5,7,9,1,3]
